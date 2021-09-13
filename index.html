@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+</head>
+
+<style type="text/css">
+  div {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    margin: 0 auto;
+    padding: 120px;
+    box-sizing: border-box;
+  }
+</style>
+
+<body>
+  <center>
+    <h1>Welcome to Login Page</h1>
+  </center>
+  <hr>
+
+  <div>
+    username:<br>
+    <input type="text" name="text" id="username">
+    <br><br>
+    password:<br>
+    <input type="password" name="text" id="password">
+    <br><br>
+    <button onclick="page()">Submit</button>
+  </div>
+
+  <script type="text/javascript">
+
+    function page() {
+      var uname = document.getElementById('username').value;
+      var pass = document.getElementById('password').value;
+      if (uname == "Shalini" && pass == "123") {
+        var URL = "http://127.0.0.1:5500/page.html";
+        window.open(URL, null);
+      }
+      else {
+        window.alert("Login failed");
+      }
+    }
+  </script>
+</body>
+
+</html>
